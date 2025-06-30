@@ -2,17 +2,22 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Hiperfoco – Links Úteis</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet" />
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+    /* Fundo de números binários em cascata */
     body {
       margin: 0;
       font-family: 'Montserrat', sans-serif;
-      background: linear-gradient(135deg, #000000, #1a1a1a);
-      color: #fff;
+      overflow: hidden;
+      background: black;
+      color: #00ffff;
       text-align: center;
-      padding: 40px 20px;
+      height: 100vh;
+      position: relative;
       opacity: 0;
       animation: fadeIn 1.5s forwards;
     }
@@ -21,23 +26,32 @@
         opacity: 1;
       }
     }
+
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 0;
+      background: black;
+    }
+
     .container {
+      position: relative;
+      z-index: 1;
       max-width: 500px;
       margin: 0 auto;
+      padding: 40px 20px;
     }
     h1 {
       font-size: 32px;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
       color: #00ffff;
-    }
-    p {
-      font-size: 16px;
-      margin-bottom: 30px;
-      color: #ccc;
     }
     .link {
       display: block;
-      background: #111;
+      background: rgba(0, 255, 255, 0.1);
       color: #00ffff;
       padding: 14px 20px;
       margin: 20px 0;
@@ -47,6 +61,7 @@
       transition: all 0.3s ease;
       font-weight: 600;
       font-size: 18px;
+      backdrop-filter: blur(5px);
     }
     .link:hover {
       background: #00ffff;
@@ -56,13 +71,59 @@
   </style>
 </head>
 <body>
+  <canvas id="binaryCanvas"></canvas>
   <div class="container">
     <h1>Hiperfoco</h1>
-    <p>Método de 10 minutos por dia para mudar sua vida</p>
 
     <a class="link" href="https://ghostman2709.github.io/Index/?fbclid=PAQ0xDSwLO2PNleHRuA2FlbQIxMQABp9-OYNMfGP5dsFm54Qa6deUqoNcgOagTfGUD3bIdAjupAVlRZRTpuogLB8qV_aem_gn6AMbdGk-AqnXV5qvguLg" target="_blank">Livro Hiperfoco</a>
 
-    <a class="link" href="https://ghostman2709.github.io/IA/?fbclid=PAQ0xDSwLO2TJleHRuA2FlbQIxMAABp6VGyqOgG0HUxTe8Aw9DLm1SywqKWxsa4dTx7h1R5WVqYrMgxQXsSPWrVR9p_aem_IxqqNsG7FL1rEXLGjoP2cg" target="_blank">Mestee de IA Cursos</a>
+    <a class="link" href="https://ghostman2709.github.io/IA/?fbclid=PAQ0xDSwLO2TJleHRuA2FlbQIxMAABp6VGyqOgG0HUxTe8Aw9DLm1SywqKWxsa4dTx7h1R5WVqYrMgxQXsSPWrVR9p_aem_IxqqNsG7FL1rEXLGjoP2cg" target="_blank">Mestre de IA</a>
   </div>
+
+  <script>
+    const canvas = document.getElementById('binaryCanvas');
+    const ctx = canvas.getContext('2d');
+
+    // Ajustar canvas para o tamanho da janela
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const binary = "01";
+    const fontSize = 16;
+    const columns = canvas.width / fontSize;
+
+    const drops = [];
+
+    for(let x = 0; x < columns; x++) {
+      drops[x] = Math.random() * canvas.height;
+    }
+
+    function draw() {
+      // Fundo transparente para efeito de desbotar
+      ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      ctx.fillStyle = "#00ffff"; // cor dos números
+      ctx.font = fontSize + "px monospace";
+
+      for(let i = 0; i < drops.length; i++) {
+        const text = binary.charAt(Math.floor(Math.random() * binary.length));
+        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+        if(drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+          drops[i] = 0;
+        }
+        drops[i]++;
+      }
+    }
+
+    setInterval(draw, 35);
+
+    // Atualizar tamanho do canvas ao redimensionar
+    window.addEventListener('resize', () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    });
+  </script>
 </body>
 </html>
