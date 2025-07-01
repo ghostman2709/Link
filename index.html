@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hiperfoco – Links Úteis</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(135deg, #001122, #002244);
+      color: #66ccff;
+      text-align: center;
+      min-height: 100vh;
+      padding: 40px 20px;
+      animation: fadeIn 1.5s ease-in-out forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #66ccff;
+      text-shadow: 0 0 10px #3399ff;
+    }
+
+    .desc {
+      font-size: 16px;
+      margin-bottom: 25px;
+      color: #aaccee;
+    }
+
+    .link {
+      display: block;
+      background: rgba(102, 204, 255, 0.08);
+      color: #66ccff;
+      padding: 14px 22px;
+      margin: 16px 0;
+      text-decoration: none;
+      border: 2px solid #66ccff;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 18px;
+      backdrop-filter: blur(5px);
+      transition: all 0.3s ease;
+    }
+
+    .link:hover {
+      background: #66ccff;
+      color: #001122;
+      transform: scale(1.05);
+    }
+
+    .btn-audio {
+      margin: 20px auto 40px auto;
+      padding: 14px 30px;
+      font-size: 17px;
+      font-weight: bold;
+      color: #001122;
+      background-color: #66ccff;
+      border: none;
+      border-radius: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .btn-audio:hover {
+      background-color: #3399ff;
+      transform: scale(1.05);
+    }
+
+    .section-title {
+      margin-top: 40px;
+      font-size: 22px;
+      color: #88ddff;
+      text-shadow: 0 0 8px #2277cc;
+    }
+
+    footer {
+      margin-top: 50px;
+      font-size: 0.9rem;
+      color: #88aabb;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Hiperfoco</h1>
+    <p class="desc">Acesse os principais projetos, livros e cursos criados para seu crescimento pessoal, digital e financeiro.</p>
+
+    <button class="btn-audio" id="btnAudio">🎧 Ativar Áudio Binaural</button>
+
+    <a class="link" href="https://ghostman2709.github.io/Index/" target="_blank">📘 Livro Hiperfoco – O Poder de 10 Minutos por Dia</a>
+    <a class="link" href="https://ghostman2709.github.io/IA/" target="_blank">🤖 Curso Mestre em Inteligência Artificial</a>
+    <a class="link" href="https://wa.me/5555996043937?text=Olá,%20quero%20acesso%20e%20suporte%20do%20Hiperfoco%20e%20IA" target="_blank">💬 Suporte e Pagamentos via WhatsApp</a>
+
+    <h2 class="section-title">📗 Ebook: Prepare Seu Filho Para o Futuro</h2>
+    <a class="link" href="https://ghostman2709.github.io/filho-futuro/" target="_blank">
+      👨‍👩‍👧 Dicas práticas para educação emocional, financeira e digital
+    </a>
+
+    <h2 class="section-title">💡 Projeto BTC: Money in Your Head</h2>
+    <a class="link" href="https://ghostman2709.github.io/btc-memoria/" target="_blank">
+      🧠 Memorize 12 palavras e controle seus investimentos com segurança e inteligência
+    </a>
+  </div>
+
+  <audio id="audioBinaural" src="binaural.mp3" loop preload="auto"></audio>
+
+  <footer>
+    © 2025 Projeto Hiperfoco – Criado por Érico Mendieta
+  </footer>
+
+  <script>
+    const btnAudio = document.getElementById('btnAudio');
+    const audio = document.getElementById('audioBinaural');
+    let isPlaying = false;
+
+    btnAudio.addEventListener('click', () => {
+      if (!isPlaying) {
+        audio.play();
+        btnAudio.textContent = '⏸️ Parar Áudio Binaural';
+        isPlaying = true;
+      } else {
+        audio.pause();
+        btnAudio.textContent = '🎧 Ativar Áudio Binaural';
+        isPlaying = false;
+      }
+    });
+  </script>
+</body>
+</html>
