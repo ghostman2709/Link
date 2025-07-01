@@ -3,70 +3,131 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Hiperfoco – Links Úteis</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet" />
+  <title>Hyper Foco – O Poder de 1 Minuto por Dia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
   <style>
     body {
-      margin: 0;
       font-family: 'Montserrat', sans-serif;
-      background: linear-gradient(135deg, #000000, #1a1a1a);
-      color: #99ffcc;
-      text-align: center;
-      min-height: 100vh;
-      padding: 40px 20px;
-      opacity: 0;
-      transform: scale(0.95);
-      animation: fadeIn 3s ease-in-out forwards;
+      background-color: #121212;
+      color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+      line-height: 1.6;
     }
-
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-        transform: scale(1);
-      }
-    }
-
     .container {
-      max-width: 500px;
-      margin: 0 auto;
-    }
-
-    h1 {
-      font-size: 32px;
-      margin-bottom: 20px;
-      color: #99ffcc;
-      text-shadow: 0 0 10px #00ffcc;
-    }
-
-    .link {
-      display: block;
-      background: rgba(0, 255, 204, 0.1);
-      color: #99ffcc;
-      padding: 14px 20px;
-      margin: 20px 0;
-      text-decoration: none;
-      border: 2px solid #99ffcc;
+      max-width: 900px;
+      margin: auto;
+      background: #1e1e1e;
+      padding: 30px;
       border-radius: 12px;
-      transition: all 0.3s ease;
-      font-weight: 600;
-      font-size: 18px;
-      backdrop-filter: blur(5px);
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
     }
-
-    .link:hover {
-      background: #99ffcc;
-      color: #000;
-      transform: scale(1.05);
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    header h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+      color: #3399ff;
+    }
+    header p {
+      font-size: 18px;
+      color: #ccc;
+      margin-top: 0;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    nav ul li {
+      background: #2a3b4d;
+      padding: 15px 20px;
+      border-radius: 8px;
+      border-left: 5px solid #3399ff;
+      transition: background-color 0.3s ease;
+    }
+    nav ul li:hover {
+      background: #3b4e6b;
+      cursor: pointer;
+    }
+    nav ul li a {
+      color: #f4f4f4;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 18px;
+      display: block;
+    }
+    h2 {
+      color: #ffffff;
+      margin-top: 50px;
+    }
+    a.whatsapp {
+      color: #00ccff;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    a.whatsapp:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 14px;
+      color: #666;
+    }
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 28px;
+      }
+      nav ul {
+        grid-template-columns: 1fr;
+      }
+      nav ul li {
+        font-size: 16px;
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Hiperfoco</h1>
+    <header>
+      <h1>Hyper Foco</h1>
+      <p>O Poder de 1 Minuto por Dia – Transforme sua vida com foco e disciplina</p>
+    </header>
 
-    <a class="link" href="https://ghostman2709.github.io/Index/?fbclid=PAQ0xDSwLO2PNleHRuA2FlbQIxMQABp9-OYNMfGP5dsFm54Qa6deUqoNcgOagTfGUD3bIdAjupAVlRZRTpuogLB8qV_aem_gn6AMbdGk-AqnXV5qvguLg" target="_blank">Livro Hiperfoco</a>
+    <nav>
+      <ul>
+        <li><a href="capitulo1.html">Capítulo 1 – O Desejo é o Ponto de Partida</a></li>
+        <li><a href="capitulo2.html">Capítulo 2 – O Poder da Autosugestão</a></li>
+        <li><a href="capitulo3.html">Capítulo 3 – Fé: A Ligação Invisível com o Invisível</a></li>
+        <li><a href="capitulo4.html">Capítulo 4 – Lei da Atração e Frequência Mental</a></li>
+        <li><a href="capitulo5.html">Capítulo 5 – A Mente Mestra: Você Não Chegará Lá Sozinho</a></li>
+        <li><a href="capitulo6.html">Capítulo 6 – A Emoção é a Força do Pensamento</a></li>
+        <li><a href="capitulo7.html">Capítulo 7 – Ação Massiva com Direção Clara</a></li>
+        <li><a href="capitulo8.html">Capítulo 8 – Persistência: A Chave Que Abre Portas Invisíveis</a></li>
+        <li><a href="capitulo9.html">Capítulo 9 – Controle do Tempo e do Ambiente Mental</a></li>
+        <li><a href="capitulo10.html">Capítulo 10 – Dominando o Medo, o Inimigo Interno</a></li>
+      </ul>
+    </nav>
 
-    <a class="link" href="https://ghostman2709.github.io/IA/?fbclid=PAQ0xDSwLO2TJleHRuA2FlbQIxMAABp6VGyqOgG0HUxTe8Aw9DLm1SywqKWxsa4dTx7h1R5WVqYrMgxQXsSPWrVR9p_aem_IxqqNsG7FL1rEXLGjoP2cg" target="_blank">Mestre de IA</a>
+    <h2>📄 Comprovantes</h2>
+    <p>Veja nossos comprovantes de resultados e depoimentos reais de quem aplicou o método <strong>Hyper Foco</strong>. (Espaço reservado para imagens, prints ou vídeos futuramente.)</p>
+
+    <h2>📞 Suporte e Dúvidas</h2>
+    <p>Fale diretamente conosco pelo WhatsApp. Clique no botão abaixo:</p>
+    <p>
+      <a class="whatsapp" href="https://wa.me/55SEUNUMEROAQUI" target="_blank">
+        👉 Abrir Suporte no WhatsApp
+      </a>
+    </p>
+
+    <footer>
+      &copy; 2025 Hyper Foco - Todos os direitos reservados
+    </footer>
   </div>
 </body>
 </html>
