@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -6,123 +7,130 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --neon-color: #00f7ff;
-      --bg-color: #000a12;
-      --text-light: #ccf5ff;
+      --neon: #00f7ff;
+      --bg: #000a12;
+      --text: #ccf5ff;
       --accent: #00d4ff;
-    }body {
-  margin: 0;
-  font-family: 'Montserrat', sans-serif;
-  background: linear-gradient(135deg, #000a12, #001f33);
-  color: var(--text-light);
-  text-align: center;
-  min-height: 100vh;
-  padding: 40px 20px;
-  animation: fadeIn 2s ease-in-out forwards;
-}
+    }
 
-@keyframes fadeIn {
-  0% { opacity: 0; transform: translateY(20px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(135deg, #000a12, #001f33);
+      color: var(--text);
+      text-align: center;
+      min-height: 100vh;
+      padding: 30px 15px;
+      animation: fadeIn 1.2s ease-in-out forwards;
+    }
 
-h1 {
-  font-size: 42px;
-  margin-bottom: 20px;
-  color: var(--neon-color);
-  text-shadow: 0 0 15px var(--neon-color), 0 0 30px var(--neon-color);
-}
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
 
-.desc {
-  font-size: 18px;
-  margin-bottom: 30px;
-  color: #aaddff;
-}
+    h1 {
+      font-size: 34px;
+      margin-bottom: 18px;
+      color: var(--neon);
+      text-shadow: 0 0 10px var(--neon), 0 0 25px var(--neon);
+    }
 
-.link {
-  display: block;
-  background: rgba(0, 247, 255, 0.08);
-  color: var(--neon-color);
-  padding: 16px 24px;
-  margin: 18px auto;
-  text-decoration: none;
-  border: 2px solid var(--neon-color);
-  border-radius: 14px;
-  font-weight: 600;
-  font-size: 20px;
-  backdrop-filter: blur(8px);
-  transition: all 0.3s ease;
-  max-width: 580px;
-  box-shadow: 0 0 8px var(--neon-color);
-}
+    .desc {
+      font-size: 15px;
+      margin-bottom: 20px;
+      color: #aaddff;
+    }
 
-.link:hover {
-  background: var(--neon-color);
-  color: #000a12;
-  transform: scale(1.06);
-  box-shadow: 0 0 20px var(--neon-color);
-}
+    .link {
+      display: block;
+      background: rgba(0, 247, 255, 0.05);
+      color: var(--neon);
+      padding: 12px 20px;
+      margin: 14px auto;
+      text-decoration: none;
+      border: 2px solid var(--neon);
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 17px;
+      backdrop-filter: blur(6px);
+      transition: all 0.25s ease;
+      max-width: 500px;
+      box-shadow: 0 0 6px var(--neon);
+      text-align: left;
+    }
 
-.btn-audio {
-  margin: 20px auto 40px auto;
-  padding: 16px 32px;
-  font-size: 18px;
-  font-weight: bold;
-  color: #001122;
-  background-color: var(--accent);
-  border: none;
-  border-radius: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  max-width: 320px;
-  box-shadow: 0 0 12px var(--accent);
-}
+    .link:hover {
+      background: var(--neon);
+      color: #000a12;
+      transform: scale(1.04);
+      box-shadow: 0 0 16px var(--neon);
+    }
 
-.btn-audio:hover {
-  background-color: #00aaff;
-  transform: scale(1.05);
-}
+    .btn-audio {
+      margin: 20px auto 35px auto;
+      padding: 12px 28px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #001122;
+      background-color: var(--accent);
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      max-width: 280px;
+      box-shadow: 0 0 10px var(--accent);
+    }
 
-.section-title {
-  margin-top: 50px;
-  font-size: 24px;
-  color: #00f0ff;
-  text-shadow: 0 0 10px #00bfff;
-  font-weight: 700;
-  text-align: center;
-}
+    .btn-audio:hover {
+      background-color: #00aaff;
+      transform: scale(1.05);
+    }
 
-footer {
-  margin-top: 60px;
-  font-size: 0.95rem;
-  color: #88bbcc;
-}
+    .section-title {
+      margin-top: 35px;
+      font-size: 20px;
+      color: #00eaff;
+      text-shadow: 0 0 8px #00bfff;
+      font-weight: 700;
+      text-align: center;
+    }
 
+    footer {
+      margin-top: 40px;
+      font-size: 0.85rem;
+      color: #88bbcc;
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>🚀 Hiperfoco Total</h1>
-    <p class="desc">Links essenciais para acelerar sua mente, seu negócio e sua liberdade financeira.</p><button class="btn-audio" id="btnAudio">🎧 Ativar Frequência Binaural</button>
+    <h1>🚀 Hiperfoco</h1>
+    <p class="desc">Links diretos para acelerar sua mente, seu negócio e sua renda digital.</p>
 
-<a class="link" href="https://ghostman2709.github.io/Index/" target="_blank">📘 Livro Digital – Hiperfoco em 10 Minutos por Dia</a>
-<a class="link" href="https://ghostman2709.github.io/IA/" target="_blank">🤖 Curso Mestre em Inteligência Artificial com IA</a>
+    <button class="btn-audio" id="btnAudio">🎧 Ativar Frequência Binaural</button>
 
-<h2 class="section-title">💼 WhatsApp Vendedor com HiperBoot</h2>
-<a class="link" href="https://ghostman2709.github.io/HiperBoot/?fbclid=PAQ0xDSwLdXoxleHRuA2FlbQIxMQABp2PyTX-hHZwzMqo-FyGzkVDa0iJWxR0ilpl_H_YOmK2V9RInLFrz4rG0xLUf_aem_VnqzKXvyuH-yI6-DO0zZpw" target="_blank">
-  🤖 Transforme seu WhatsApp em uma máquina de vendas automática 24h/dia, com pagamentos e entregas integradas!
-</a>
+    <a class="link" href="https://ghostman2709.github.io/Index/" target="_blank">📘 Ebook – Hiperfoco em 10 Minutos por Dia</a>
+    <a class="link" href="https://ghostman2709.github.io/IA/" target="_blank">🤖 Curso Mestre em Inteligência Artificial</a>
 
-<h2 class="section-title">🔐 BTC Memory System</h2>
-<a class="link" href="https://ghostman2709.github.io/btc-memoria/" target="_blank">
-  🧠 Memorize 12 palavras e assuma o controle dos seus investimentos de forma segura
-</a>
+    <h2 class="section-title">💼 WhatsApp Automático com HiperBoot</h2>
+    <a class="link" href="https://ghostman2709.github.io/HiperBoot/?fbclid=PAQ0xDSwLdXoxleHRuA2FlbQIxMQABp2PyTX-hHZwzMqo-FyGzkVDa0iJWxR0ilpl_H_YOmK2V9RInLFrz4rG0xLUf_aem_VnqzKXvyuH-yI6-DO0zZpw" target="_blank">
+      🔄 Transforme seu WhatsApp em uma máquina de vendas 24h por dia com pagamentos e entregas automáticas
+    </a>
 
-  </div><audio id="audioBinaural" src="binaural.mp3" loop preload="auto"></audio>
+    <h2 class="section-title">🔐 BTC Memory System</h2>
+    <a class="link" href="https://ghostman2709.github.io/btc-memoria/" target="_blank">
+      🧠 Memorize 12 palavras e assuma o controle seguro dos seus investimentos
+    </a>
+  </div>
+
+  <audio id="audioBinaural" src="binaural.mp3" loop preload="auto"></audio>
 
   <footer>
-    © 2025 Projeto Hiperfoco • Criado por Érico Mendieta
-  </footer>  <script>
+    © 2025 Projeto Hiperfoco – Criado por Érico Mendieta
+  </footer>
+
+  <script>
     const btnAudio = document.getElementById('btnAudio');
     const audio = document.getElementById('audioBinaural');
     let isPlaying = false;
@@ -138,5 +146,6 @@ footer {
         isPlaying = false;
       }
     });
-  </script></body>
+  </script>
+</body>
 </html>
