@@ -3,25 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Hiperfoco – Links Poderosos</title>
+  <meta name="color-scheme" content="dark light" />
+  <title>Hiperfoco – Links Essenciais</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet" />
   <style>
-    :root {
-      --neon: #00f7ff;
-      --bg: #000a12;
-      --text: #ccf5ff;
-      --accent: #00d4ff;
+    * {
+      box-sizing: border-box;
     }
 
     body {
       margin: 0;
       font-family: 'Montserrat', sans-serif;
-      background: linear-gradient(135deg, #000a12, #001f33);
-      color: var(--text);
+      background: linear-gradient(135deg, #001122, #002244);
+      color: #66ccff;
       text-align: center;
-      min-height: 100vh;
       padding: 30px 15px;
-      animation: fadeIn 1.2s ease-in-out forwards;
+      animation: fadeIn 1.2s ease-out;
     }
 
     @keyframes fadeIn {
@@ -30,97 +27,111 @@
     }
 
     h1 {
-      font-size: 34px;
-      margin-bottom: 18px;
-      color: var(--neon);
-      text-shadow: 0 0 10px var(--neon), 0 0 25px var(--neon);
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+      color: #66ccff;
+      text-shadow: 0 0 10px #3399ff;
     }
 
     .desc {
-      font-size: 15px;
-      margin-bottom: 20px;
-      color: #aaddff;
+      font-size: 1rem;
+      margin-bottom: 30px;
+      color: #aaccee;
+    }
+
+    .section {
+      margin-bottom: 30px;
+    }
+
+    .section h2 {
+      font-size: 1.3rem;
+      color: #66ccff;
+      text-shadow: 0 0 6px #3399ff;
+      margin-bottom: 10px;
     }
 
     .link {
       display: block;
-      background: rgba(0, 247, 255, 0.05);
-      color: var(--neon);
+      background: rgba(102, 204, 255, 0.08);
+      color: #66ccff;
       padding: 12px 20px;
-      margin: 14px auto;
+      margin: 10px auto;
       text-decoration: none;
-      border: 2px solid var(--neon);
-      border-radius: 10px;
+      border: 2px solid #66ccff;
+      border-radius: 12px;
       font-weight: 600;
-      font-size: 17px;
-      backdrop-filter: blur(6px);
-      transition: all 0.25s ease;
+      font-size: 1rem;
+      backdrop-filter: blur(5px);
+      transition: all 0.3s ease;
       max-width: 500px;
-      box-shadow: 0 0 6px var(--neon);
-      text-align: left;
+      box-shadow: 0 0 12px #66ccff44;
     }
 
     .link:hover {
-      background: var(--neon);
-      color: #000a12;
+      background: #66ccff;
+      color: #001122;
       transform: scale(1.04);
-      box-shadow: 0 0 16px var(--neon);
     }
 
     .btn-audio {
-      margin: 20px auto 35px auto;
-      padding: 12px 28px;
-      font-size: 16px;
+      margin: 25px auto 40px;
+      padding: 12px 24px;
+      font-size: 1rem;
       font-weight: bold;
       color: #001122;
-      background-color: var(--accent);
+      background-color: #66ccff;
       border: none;
       border-radius: 12px;
       cursor: pointer;
       transition: background-color 0.3s ease, transform 0.3s ease;
       max-width: 280px;
-      box-shadow: 0 0 10px var(--accent);
     }
 
     .btn-audio:hover {
-      background-color: #00aaff;
+      background-color: #3399ff;
       transform: scale(1.05);
     }
 
-    .section-title {
-      margin-top: 35px;
-      font-size: 20px;
-      color: #00eaff;
-      text-shadow: 0 0 8px #00bfff;
-      font-weight: 700;
-      text-align: center;
-    }
-
     footer {
-      margin-top: 40px;
-      font-size: 0.85rem;
-      color: #88bbcc;
+      margin-top: 50px;
+      font-size: 0.9rem;
+      color: #88aabb;
+      text-shadow: 0 0 4px #2277cc;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>🚀 Hiperfoco</h1>
-    <p class="desc">Links diretos para acelerar sua mente, seu negócio e sua renda digital.</p>
 
-    <button class="btn-audio" id="btnAudio">🎧 Ativar Frequência Binaural</button>
+  <h1>🚀 Hiperfoco</h1>
+  <p class="desc">Links essenciais para impulsionar sua mente, negócio e liberdade digital.</p>
 
-    <a class="link" href="https://ghostman2709.github.io/Index/" target="_blank">📘 Ebook – Hiperfoco em 10 Minutos por Dia</a>
-    <a class="link" href="https://ghostman2709.github.io/IA/" target="_blank">🤖 Curso Mestre em Inteligência Artificial</a>
+  <button class="btn-audio" id="btnAudio">🎧 Ativar Trilha Binaural</button>
 
-    <h2 class="section-title">💼 WhatsApp Automático com HiperBoot</h2>
-    <a class="link" href="https://ghostman2709.github.io/HiperBoot/?fbclid=PAQ0xDSwLdXoxleHRuA2FlbQIxMQABp2PyTX-hHZwzMqo-FyGzkVDa0iJWxR0ilpl_H_YOmK2V9RInLFrz4rG0xLUf_aem_VnqzKXvyuH-yI6-DO0zZpw" target="_blank">
-      🔄 Transforme seu WhatsApp em uma máquina de vendas 24h por dia com pagamentos e entregas automáticas
+  <div class="section">
+    <h2>📘 Livro Hiperfoco</h2>
+    <a class="link" href="https://ghostman2709.github.io/Index/" target="_blank">
+      Hiperfoco – O Poder de 10 Minutos por Dia
     </a>
+  </div>
 
-    <h2 class="section-title">🔐 BTC Memory System</h2>
+  <div class="section">
+    <h2>🤖 Curso Mestre em IA</h2>
+    <a class="link" href="https://ghostman2709.github.io/IA/" target="_blank">
+      Domine a Inteligência Artificial na prática
+    </a>
+  </div>
+
+  <div class="section">
+    <h2>💼 HiperBoot – WhatsApp de Vendas</h2>
+    <a class="link" href="https://ghostman2709.github.io/HiperBoot/" target="_blank">
+      Transforme seu WhatsApp em vendas automáticas 24h
+    </a>
+  </div>
+
+  <div class="section">
+    <h2>🔐 BTC Memory System</h2>
     <a class="link" href="https://ghostman2709.github.io/btc-memoria/" target="_blank">
-      🧠 Memorize 12 palavras e assuma o controle seguro dos seus investimentos
+      Memorize 12 palavras e proteja seus investimentos
     </a>
   </div>
 
@@ -138,14 +149,15 @@
     btnAudio.addEventListener('click', () => {
       if (!isPlaying) {
         audio.play();
-        btnAudio.textContent = '⏸️ Parar Frequência Binaural';
+        btnAudio.textContent = '⏸️ Parar Trilha Binaural';
         isPlaying = true;
       } else {
         audio.pause();
-        btnAudio.textContent = '🎧 Ativar Frequência Binaural';
+        btnAudio.textContent = '🎧 Ativar Trilha Binaural';
         isPlaying = false;
       }
     });
   </script>
+
 </body>
 </html>
