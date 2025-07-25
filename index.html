@@ -3,154 +3,98 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="color-scheme" content="dark light" />
-  <title>Hiperfoco – Links Essenciais</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet" />
+  <title>HiperBoot</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
     body {
       margin: 0;
-      font-family: 'Montserrat', sans-serif;
-      background: linear-gradient(135deg, #001122, #002244);
-      color: #66ccff;
+      padding: 0;
+      background: linear-gradient(to bottom, #000000, #0a0a0a);
+      font-family: Arial, sans-serif;
+      color: white;
       text-align: center;
-      padding: 30px 15px;
-      animation: fadeIn 1.2s ease-out;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(15px); }
-      to { opacity: 1; transform: translateY(0); }
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      gap: 30px;
+      padding: 20px;
     }
 
-    h1 {
-      font-size: 2.2rem;
-      margin-bottom: 10px;
-      color: #66ccff;
-      text-shadow: 0 0 10px #3399ff;
+    .logo {
+      max-width: 240px;
+      filter: drop-shadow(0 0 12px #00f2ff);
     }
 
-    .desc {
-      font-size: 1rem;
-      margin-bottom: 30px;
-      color: #aaccee;
-    }
-
-    .section {
-      margin-bottom: 30px;
-    }
-
-    .section h2 {
-      font-size: 1.3rem;
-      color: #66ccff;
-      text-shadow: 0 0 6px #3399ff;
-      margin-bottom: 10px;
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      width: 100%;
+      max-width: 320px;
     }
 
     .link {
-      display: block;
-      background: rgba(102, 204, 255, 0.08);
-      color: #66ccff;
-      padding: 12px 20px;
-      margin: 10px auto;
-      text-decoration: none;
-      border: 2px solid #66ccff;
+      background: #0a0a0a;
+      border: 2px solid #00f2ff;
+      padding: 14px 20px;
       border-radius: 12px;
-      font-weight: 600;
-      font-size: 1rem;
-      backdrop-filter: blur(5px);
-      transition: all 0.3s ease;
-      max-width: 500px;
-      box-shadow: 0 0 12px #66ccff44;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: 0.3s;
     }
 
     .link:hover {
-      background: #66ccff;
-      color: #001122;
-      transform: scale(1.04);
+      background: #00f2ff;
+      color: #000;
     }
 
-    .btn-audio {
-      margin: 25px auto 40px;
-      padding: 12px 24px;
-      font-size: 1rem;
-      font-weight: bold;
-      color: #001122;
-      background-color: #66ccff;
-      border: none;
-      border-radius: 12px;
-      cursor: pointer;
-      transition: background-color 0.3s ease, transform 0.3s ease;
-      max-width: 280px;
+    .icons {
+      font-size: 20px;
+      margin-top: 5px;
     }
 
-    .btn-audio:hover {
-      background-color: #3399ff;
-      transform: scale(1.05);
+    .icons span {
+      margin: 0 6px;
     }
 
-    footer {
-      margin-top: 50px;
-      font-size: 0.9rem;
-      color: #88aabb;
-      text-shadow: 0 0 4px #2277cc;
+    audio {
+      margin-top: 20px;
+      width: 90%;
+      max-width: 320px;
     }
   </style>
 </head>
 <body>
+  <div class="container">
+    <img src="logo.png" alt="HiperBoot" class="logo" />
 
-  <h1>🚀 Hiperfoco</h1>
-  <p class="desc">Links essenciais para impulsionar sua mente, negócio e liberdade digital.</p>
+    <div class="links">
+      <a class="link" href="p2p.html">
+        <div>
+          (Bitcoin) venda direta P2P compra e venda (USDT)<br />
+          <small style="font-weight: normal;">
+            Explicamos o dólar digital, como fazer câmbio entre pesos, reais, dólares e euros.
+          </small>
+        </div>
+        <div class="icons">
+          <span>₿</span><span>⇄</span><span>USDT</span><span>$</span><span>€</span><span>₱</span><span>R$</span>
+        </div>
+      </a>
 
-  <button class="btn-audio" id="btnAudio">🎧 Ativar Trilha Binaural</button>
+      <a class="link" href="https://api.whatsapp.com/send?phone=59895000000&text=Quero%20aprender%20a%20usar%20o%20HiperBoot!">
+        Falar com Especialista no WhatsApp 📲
+      </a>
+    </div>
 
-  <div class="section">
-    <h2>📘 Livro Hiperfoco</h2>
-    <a class="link" href="https://ghostman2709.github.io/Index/" target="_blank">
-      Hiperfoco – O Poder de 10 Minutos por Dia
-    </a>
+    <audio controls autoplay loop>
+      <source src="binaural.mp3" type="audio/mp3" />
+      Seu navegador não suporta áudio.
+    </audio>
   </div>
-
-  <div class="section">
-    <h2>🤖 HiperBoot – WhatsApp de Vendas</h2>
-    <a class="link" href="https://ghostman2709.github.io/HiperBoot/" target="_blank">
-      Transforme seu WhatsApp em uma máquina de vendas automática
-    </a>
-  </div>
-
-  <div class="section">
-    <h2>🔐 BTC Memory System</h2>
-    <a class="link" href="https://ghostman2709.github.io/btc-memoria/" target="_blank">
-      Memorize 12 palavras e proteja seus investimentos
-    </a>
-  </div>
-
-  <audio id="audioBinaural" src="binaural.mp3" loop preload="auto"></audio>
-
-  <footer>
-    © 2025 Projeto Hiperfoco – Criado por Érico Mendieta
-  </footer>
-
-  <script>
-    const btnAudio = document.getElementById('btnAudio');
-    const audio = document.getElementById('audioBinaural');
-    let isPlaying = false;
-
-    btnAudio.addEventListener('click', () => {
-      if (!isPlaying) {
-        audio.play();
-        btnAudio.textContent = '⏸️ Parar Trilha Binaural';
-        isPlaying = true;
-      } else {
-        audio.pause();
-        btnAudio.textContent = '🎧 Ativar Trilha Binaural';
-        isPlaying = false;
-      }
-    });
-  </script>
-
 </body>
 </html>
