@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark light" />
+  <title>HiperBoot 🤖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    /* Estilos globais e cores de base do exemplo */
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif; /* Usando a fonte do exemplo */
+      background: linear-gradient(135deg, #001122, #002244); /* Fundo gradiente do exemplo */
+      color: #99ccff; /* Cor geral do texto, um pouco mais suave que o neon puro */
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      padding: 30px 15px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #66ccff; /* Azul neon para o título principal */
+      margin: 20px 0 10px;
+      text-shadow: 0 0 12px #3399ffcc; /* Efeito neon no título */
+      font-weight: 700; /* Negrito da fonte Montserrat */
+    }
+
+    .slogan-header {
+      font-size: 1.2rem;
+      color: #66ccff; /* AGORA NA MESMA COR NEON DOS TÍTULOS */
+      margin-top: -10px; /* Ajusta a proximidade com o H1 */
+      text-shadow: 0 0 5px #3399ff88; /* Brilho sutil, ajustado para o neon */
+      font-weight: 500;
+    }
+
+    /* Estilos para as seções 'fluxo' inspirados na 'section' do exemplo */
+    .fluxo {
+      padding: 2rem 1.5rem 3rem;
+      max-width: 800px;
+      margin: 1rem auto;
+      border: 2px solid #66ccff; /* Borda neon */
+      border-radius: 16px;
+      background: rgba(0, 17, 34, 0.6); /* Fundo semi-transparente escuro */
+      box-shadow: 0 0 30px #66ccff, 0 0 60px #3399ffaa; /* Brilho neon intenso */
+      backdrop-filter: blur(5px); /* Efeito de vidro fosco */
+      color: #99ccff; /* Cor do texto dentro das caixas */
+    }
+
+    .fluxo h2 {
+      color: #66ccff; /* Azul neon para subtítulos */
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 5px #3399ff; /* Efeito neon */
+      font-weight: 700;
+    }
+
+    .fluxo p {
+      font-size: 1rem;
+      margin-bottom: 12px;
+    }
+
+    .etapas {
+      margin-top: 20px;
+      padding-left: 20px;
+    }
+
+    .etapas li {
+      margin-bottom: 10px;
+    }
+
+    .destaque {
+      color: #00ffff; /* Um neon ligeiramente diferente para destaques internos */
+      font-weight: bold;
+      text-shadow: 0 0 3px #00ffff; /* Pequeno brilho para o destaque */
+    }
+
+    /* Estilos para o botão CTA inspirados no 'link' do exemplo */
+    .cta-button {
+      display: block;
+      background: rgba(102, 204, 255, 0.1); /* Fundo semi-transparente do botão */
+      color: #66ccff; /* Texto neon do botão */
+      padding: 14px 20px;
+      margin: 15px auto;
+      text-decoration: none;
+      border: 2px solid #66ccff; /* Borda neon do botão */
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      font-weight: 700;
+      font-size: 18px;
+      max-width: 300px;
+      backdrop-filter: blur(5px); /* Efeito de vidro fosco no botão */
+      cursor: pointer;
+      box-shadow: 0 0 10px #66ccff; /* Brilho neon no botão */
+      text-align: center;
+    }
+
+    .cta-button:hover {
+      background: #66ccff; /* Inverte as cores ao passar o mouse */
+      color: #001122; /* Cor do texto no hover */
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #66ccffcc; /* Brilho maior no hover */
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: #88aabb; /* Cor do rodapé ligeiramente esmaecida */
+      text-shadow: 0 0 5px #3399ff88; /* Brilho sutil no rodapé */
+    }
+
+    /* Media queries do exemplo para responsividade */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+      .fluxo {
+        padding: 1.5rem 1rem;
+      }
+      .fluxo h2 {
+        font-size: 1.4rem;
+      }
+      .cta-button {
+        font-size: 1.1rem;
+        padding: 1rem 1.2rem;
+        max-width: 100%;
+      }
+    }
+
+    /* Estilos para o efeito Fade-in */
+    .fade-in-element {
+      opacity: 0;
+      transform: translateY(20px); /* Começa um pouco abaixo */
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Duração e tipo de transição */
+    }
+
+    .fade-in-element.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <header class="fade-in-element">
+    <h1>HiperBoot 🤖</h1>
+    <p class="slogan-header">Sua Automação Inteligente para Vendas e Atendimento 24h.</p>
+  </header>
+
+  <div class="fluxo fade-in-element">
+    <h2>🚀 Automatize com o HiperBoot em 6 Passos Simples!</h2>
+    <ul class="etapas">
+      <li>1. <span class="destaque">Conexão Instantânea:</span> Seu cliente inicia a conversa via WhatsApp, a qualquer hora.</li>
+      <li>2. <span class="destaque">Vitrine Digital Inteligente:</span> O bot apresenta seus produtos e gera o Pix automaticamente.</li>
+      <li>3. <span class="destaque">Pagamento Simplificado:</span> O cliente envia o comprovante diretamente.</li>
+      <li>4. <span class="destaque">Confirmação Imbatível:</span> O HiperBoot verifica o Pix via <span class="destaque">API bancária</span>, garantindo <span class="destaque">segurança e veracidade em segundos!</span>.</li>
+      <li>5. <span class="destaque">Entrega Otimizada:</span>
+        <ul>
+          <li>🛵 **Produtos Físicos:** Acionamos motoboy/Uber de confiança com endereço para retirada e entrega.</li>
+          <li>📦 **Produtos Digitais:** O link de acesso é liberado instantaneamente.</li>
+        </ul>
+      </li>
+      <li>6. <span class="destaque">Liberdade e Produtividade:</span> Todo o processo é 100% automático, liberando seu tempo!</li>
+    </ul>
+  </div>
+
+  <div class="fluxo fade-in-element">
+    <h2>📅 Agendamentos Sem Complicações para o Seu Negócio!</h2>
+    <p>Perfeito para profissionais que valorizam cada minuto:</p>
+    <ul class="etapas">
+      <li>👨‍⚖️ Advogados: Nunca mais perca um compromisso importante.</li>
+      <li>💇 Barbearias: Otimize sua agenda e receba mais clientes.</li>
+      <li>💅 Manicures e outros serviços: Garanta a organização e satisfação.</li>
+    </ul>
+    <p>Com dashboard de horários intuitivo e <span class="destaque">notificações automáticas</span> 1h antes do atendimento, reduzindo faltas e otimizando seu tempo.</p>
+  </div>
+
+  <div class="fluxo fade-in-element">
+    <h2>🎯 Por Que o HiperBoot é Essencial Para Você?</h2>
+    <ul class="etapas">
+      <li>✅ **Atendimento 24/7:** Venda e atenda sem parar, mesmo quando você está offline.</li>
+      <li>✅ **Segurança Financeira Total:** Confirmação de Pix instantânea e segura via API bancária.</li>
+      <li>✅ **Logística Integrada:** Entregas físicas e digitais automatizadas e sem atritos.</li>
+      <li>✅ **Fim dos Erros Manuais:** Elimine falhas e retrabalhos, ganhando tempo e tranquilidade.</li>
+      <li>✅ **Economia Inteligente:** Reduza significativamente seus custos operacionais.</li>
+      <li>✅ **Versatilidade Incrível:** Ideal para e-commerce, autônomos, prestadores de serviços e negócios locais.</li>
+      <li>✅ **Foco no que Importa:** Libere seu tempo para estratégia e crescimento, não para burocracia!</li>
+    </ul>
+  </div>
+
+  <div class="fluxo fade-in-element">
+    <h2>🚀 Não Perca Mais Tempo e Venda Mais Agora!</h2>
+    <p>Clique abaixo e fale com um de nossos especialistas para descobrir como o HiperBoot pode revolucionar seu negócio hoje mesmo.</p>
+    <p style="text-align: center;">
+      <a href="https://wa.me/5555996043937" target="_blank" class="cta-button">Transforme Seu Negócio AGORA!</a>
+    </p>
+  </div>
+
+  <footer class="fade-in-element">
+    HiperBoot &copy; 2025 – Soluções inteligentes e automatizadas.
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const fadeElements = document.querySelectorAll('.fade-in-element');
+
+      const observerOptions = {
+        root: null, // Observa a viewport
+        rootMargin: '0px',
+        threshold: 0.1 // 10% do elemento visível para ativar
+      };
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target); // Para a observação após a animação
+          }
+        });
+      }, observerOptions);
+
+      fadeElements.forEach(element => {
+        observer.observe(element);
+      });
+    });
+  </script>
+</body>
+</html>
