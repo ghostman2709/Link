@@ -4,16 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="color-scheme" content="dark light" />
-  <title>HiperBoot 🤖</title>
+  <title>P2P & Câmbio Online – Cripto, Real, Peso, Dólar e Euro</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
   <style>
-    /* Estilos globais e cores de base do exemplo */
     * { box-sizing: border-box; }
     body {
       margin: 0;
-      font-family: 'Montserrat', sans-serif; /* Usando a fonte do exemplo */
-      background: linear-gradient(135deg, #001122, #002244); /* Fundo gradiente do exemplo */
-      color: #99ccff; /* Cor geral do texto, um pouco mais suave que o neon puro */
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(135deg, #000814, #001f3f);
+      color: #99ccff;
       line-height: 1.6;
       scroll-behavior: smooth;
     }
@@ -24,39 +23,38 @@
     }
 
     h1 {
-      font-size: 2.5rem;
-      color: #66ccff; /* Azul neon para o título principal */
+      font-size: 2.4rem;
+      color: #66ccff;
       margin: 20px 0 10px;
-      text-shadow: 0 0 12px #3399ffcc; /* Efeito neon no título */
-      font-weight: 700; /* Negrito da fonte Montserrat */
+      text-shadow: 0 0 12px #00ffff;
+      font-weight: 700;
     }
 
     .slogan-header {
-      font-size: 1.2rem;
-      color: #66ccff; /* AGORA NA MESMA COR NEON DOS TÍTULOS */
-      margin-top: -10px; /* Ajusta a proximidade com o H1 */
-      text-shadow: 0 0 5px #3399ff88; /* Brilho sutil, ajustado para o neon */
+      font-size: 1.1rem;
+      color: #66ccff;
+      margin-top: -10px;
+      text-shadow: 0 0 5px #00ffff88;
       font-weight: 500;
     }
 
-    /* Estilos para as seções 'fluxo' inspirados na 'section' do exemplo */
     .fluxo {
       padding: 2rem 1.5rem 3rem;
       max-width: 800px;
       margin: 1rem auto;
-      border: 2px solid #66ccff; /* Borda neon */
+      border: 2px solid #66ccff;
       border-radius: 16px;
-      background: rgba(0, 17, 34, 0.6); /* Fundo semi-transparente escuro */
-      box-shadow: 0 0 30px #66ccff, 0 0 60px #3399ffaa; /* Brilho neon intenso */
-      backdrop-filter: blur(5px); /* Efeito de vidro fosco */
-      color: #99ccff; /* Cor do texto dentro das caixas */
+      background: rgba(0, 17, 34, 0.6);
+      box-shadow: 0 0 30px #00ffff88, 0 0 60px #00ffff44;
+      backdrop-filter: blur(5px);
+      color: #ccddff;
     }
 
     .fluxo h2 {
-      color: #66ccff; /* Azul neon para subtítulos */
+      color: #66ccff;
       font-size: 1.8rem;
       margin-bottom: 1rem;
-      text-shadow: 0 0 5px #3399ff; /* Efeito neon */
+      text-shadow: 0 0 5px #00ffffaa;
       font-weight: 700;
     }
 
@@ -71,73 +69,60 @@
     }
 
     .etapas li {
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
     .destaque {
-      color: #00ffff; /* Um neon ligeiramente diferente para destaques internos */
+      color: #00ffff;
       font-weight: bold;
-      text-shadow: 0 0 3px #00ffff; /* Pequeno brilho para o destaque */
+      text-shadow: 0 0 3px #00ffff;
     }
 
-    /* Estilos para o botão CTA inspirados no 'link' do exemplo */
     .cta-button {
       display: block;
-      background: rgba(102, 204, 255, 0.1); /* Fundo semi-transparente do botão */
-      color: #66ccff; /* Texto neon do botão */
+      background: rgba(102, 204, 255, 0.1);
+      color: #66ccff;
       padding: 14px 20px;
       margin: 15px auto;
       text-decoration: none;
-      border: 2px solid #66ccff; /* Borda neon do botão */
+      border: 2px solid #66ccff;
       border-radius: 12px;
       transition: all 0.3s ease;
       font-weight: 700;
       font-size: 18px;
       max-width: 300px;
-      backdrop-filter: blur(5px); /* Efeito de vidro fosco no botão */
+      backdrop-filter: blur(5px);
       cursor: pointer;
-      box-shadow: 0 0 10px #66ccff; /* Brilho neon no botão */
+      box-shadow: 0 0 10px #66ccff;
       text-align: center;
     }
 
     .cta-button:hover {
-      background: #66ccff; /* Inverte as cores ao passar o mouse */
-      color: #001122; /* Cor do texto no hover */
+      background: #66ccff;
+      color: #001122;
       transform: scale(1.05);
-      box-shadow: 0 0 20px #66ccffcc; /* Brilho maior no hover */
+      box-shadow: 0 0 20px #66ccffcc;
     }
 
     footer {
       text-align: center;
       padding: 2rem 1rem;
       font-size: 0.9rem;
-      color: #88aabb; /* Cor do rodapé ligeiramente esmaecida */
-      text-shadow: 0 0 5px #3399ff88; /* Brilho sutil no rodapé */
+      color: #88aabb;
+      text-shadow: 0 0 5px #3399ff88;
     }
 
-    /* Media queries do exemplo para responsividade */
     @media (max-width: 768px) {
-      h1 {
-        font-size: 1.8rem;
-      }
-      .fluxo {
-        padding: 1.5rem 1rem;
-      }
-      .fluxo h2 {
-        font-size: 1.4rem;
-      }
-      .cta-button {
-        font-size: 1.1rem;
-        padding: 1rem 1.2rem;
-        max-width: 100%;
-      }
+      h1 { font-size: 1.8rem; }
+      .fluxo { padding: 1.5rem 1rem; }
+      .fluxo h2 { font-size: 1.4rem; }
+      .cta-button { font-size: 1.1rem; padding: 1rem 1.2rem; max-width: 100%; }
     }
 
-    /* Estilos para o efeito Fade-in */
     .fade-in-element {
       opacity: 0;
-      transform: translateY(20px); /* Começa um pouco abaixo */
-      transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Duração e tipo de transição */
+      transform: translateY(20px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
     }
 
     .fade-in-element.is-visible {
@@ -148,81 +133,61 @@
 </head>
 <body>
   <header class="fade-in-element">
-    <h1>HiperBoot 🤖</h1>
-    <p class="slogan-header">Sua Automação Inteligente para Vendas e Atendimento 24h.</p>
+    <h1>P2P & Câmbio Online 🔁</h1>
+    <p class="slogan-header">Bitcoin, USDT, Reais, Pesos, Dólares e Euros – 24h com Segurança</p>
   </header>
 
   <div class="fluxo fade-in-element">
-    <h2>🚀 Automatize com o HiperBoot em 6 Passos Simples!</h2>
+    <h2>🔐 O que é P2P?</h2>
+    <p><span class="destaque">P2P</span> (peer-to-peer) é a negociação direta entre pessoas. Você compra ou vende criptomoedas comigo sem intermediários, com segurança, privacidade e rapidez.</p>
+    <p>Trabalho com <span class="destaque">Bitcoin (BTC)</span>, <span class="destaque">USDT</span> e também com câmbio entre <span class="destaque">Pesos</span>, <span class="destaque">Reais (BRL)</span>, <span class="destaque">Dólares (USD)</span> e <span class="destaque">Euros (EUR)</span>.</p>
+  </div>
+
+  <div class="fluxo fade-in-element">
+    <h2>💸 O que eu faço?</h2>
     <ul class="etapas">
-      <li>1. <span class="destaque">Conexão Instantânea:</span> Seu cliente inicia a conversa via WhatsApp, a qualquer hora.</li>
-      <li>2. <span class="destaque">Vitrine Digital Inteligente:</span> O bot apresenta seus produtos e gera o Pix automaticamente.</li>
-      <li>3. <span class="destaque">Pagamento Simplificado:</span> O cliente envia o comprovante diretamente.</li>
-      <li>4. <span class="destaque">Confirmação Imbatível:</span> O HiperBoot verifica o Pix via <span class="destaque">API bancária</span>, garantindo <span class="destaque">segurança e veracidade em segundos!</span>.</li>
-      <li>5. <span class="destaque">Entrega Otimizada:</span>
-        <ul>
-          <li>🛵 **Produtos Físicos:** Acionamos motoboy/Uber de confiança com endereço para retirada e entrega.</li>
-          <li>📦 **Produtos Digitais:** O link de acesso é liberado instantaneamente.</li>
-        </ul>
-      </li>
-      <li>6. <span class="destaque">Liberdade e Produtividade:</span> Todo o processo é 100% automático, liberando seu tempo!</li>
+      <li>✅ Compra e venda de <span class="destaque">BTC e USDT</span> direto com Pix ou transferência.</li>
+      <li>✅ Câmbio de <span class="destaque">Pesos para Reais</span> ou <span class="destaque">Reais para Pesos</span>.</li>
+      <li>✅ Conversão de <span class="destaque">Dólar ou Euro para BRL</span> ou vice-versa.</li>
+      <li>✅ Atendimento <span class="destaque">automático 24h</span> via WhatsApp ou <span class="destaque">presencial com agendamento</span>.</li>
+      <li>✅ Transações rápidas, privadas e seguras. Sem complicação.</li>
     </ul>
   </div>
 
   <div class="fluxo fade-in-element">
-    <h2>📅 Agendamentos Sem Complicações para o Seu Negócio!</h2>
-    <p>Perfeito para profissionais que valorizam cada minuto:</p>
+    <h2>🔁 Como funciona?</h2>
     <ul class="etapas">
-      <li>👨‍⚖️ Advogados: Nunca mais perca um compromisso importante.</li>
-      <li>💇 Barbearias: Otimize sua agenda e receba mais clientes.</li>
-      <li>💅 Manicures e outros serviços: Garanta a organização e satisfação.</li>
+      <li>1. Você me chama no WhatsApp e informa o que quer trocar (cripto ou moeda).</li>
+      <li>2. Informo a cotação e forma de pagamento ou recebimento.</li>
+      <li>3. Após confirmação, o valor ou cripto é transferido na hora.</li>
+      <li>4. Atendimento automático ou presencial com hora marcada.</li>
     </ul>
-    <p>Com dashboard de horários intuitivo e <span class="destaque">notificações automáticas</span> 1h antes do atendimento, reduzindo faltas e otimizando seu tempo.</p>
+    <p>Tudo com sigilo, transparência e suporte total.</p>
   </div>
 
   <div class="fluxo fade-in-element">
-    <h2>🎯 Por Que o HiperBoot é Essencial Para Você?</h2>
-    <ul class="etapas">
-      <li>✅ **Atendimento 24/7:** Venda e atenda sem parar, mesmo quando você está offline.</li>
-      <li>✅ **Segurança Financeira Total:** Confirmação de Pix instantânea e segura via API bancária.</li>
-      <li>✅ **Logística Integrada:** Entregas físicas e digitais automatizadas e sem atritos.</li>
-      <li>✅ **Fim dos Erros Manuais:** Elimine falhas e retrabalhos, ganhando tempo e tranquilidade.</li>
-      <li>✅ **Economia Inteligente:** Reduza significativamente seus custos operacionais.</li>
-      <li>✅ **Versatilidade Incrível:** Ideal para e-commerce, autônomos, prestadores de serviços e negócios locais.</li>
-      <li>✅ **Foco no que Importa:** Libere seu tempo para estratégia e crescimento, não para burocracia!</li>
-    </ul>
-  </div>
-
-  <div class="fluxo fade-in-element">
-    <h2>🚀 Não Perca Mais Tempo e Venda Mais Agora!</h2>
-    <p>Clique abaixo e fale com um de nossos especialistas para descobrir como o HiperBoot pode revolucionar seu negócio hoje mesmo.</p>
+    <h2>📲 Fale Comigo Agora</h2>
     <p style="text-align: center;">
-      <a href="https://wa.me/5555996043937" target="_blank" class="cta-button">Transforme Seu Negócio AGORA!</a>
+      <a href="https://wa.me/5555996043937" target="_blank" class="cta-button">Negociar no WhatsApp</a>
     </p>
+    <p style="text-align: center;">Disponível 24 horas | Atendimento rápido e direto</p>
   </div>
 
   <footer class="fade-in-element">
-    HiperBoot &copy; 2025 – Soluções inteligentes e automatizadas.
+    © 2025 – P2P & Câmbio Online | BTC, USDT, BRL, Pesos, USD e EUR com confiança.
   </footer>
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const fadeElements = document.querySelectorAll('.fade-in-element');
-
-      const observerOptions = {
-        root: null, // Observa a viewport
-        rootMargin: '0px',
-        threshold: 0.1 // 10% do elemento visível para ativar
-      };
-
       const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             entry.target.classList.add('is-visible');
-            observer.unobserve(entry.target); // Para a observação após a animação
+            observer.unobserve(entry.target);
           }
         });
-      }, observerOptions);
+      }, { threshold: 0.1 });
 
       fadeElements.forEach(element => {
         observer.observe(element);
