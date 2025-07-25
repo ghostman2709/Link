@@ -3,98 +3,83 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark light" />
   <title>HiperBoot</title>
   <style>
     body {
       margin: 0;
-      padding: 0;
-      background: linear-gradient(to bottom, #000000, #0a0a0a);
-      font-family: Arial, sans-serif;
-      color: white;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #000;
+      color: #fff;
       text-align: center;
+      padding: 40px 20px;
     }
 
-    .container {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      gap: 30px;
-      padding: 20px;
+    h1 {
+      font-size: 2.4em;
+      margin-bottom: 10px;
+      color: #00eaff;
     }
 
-    .logo {
-      max-width: 240px;
-      filter: drop-shadow(0 0 12px #00f2ff);
-    }
-
-    .links {
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-      width: 100%;
-      max-width: 320px;
-    }
-
-    .link {
-      background: #0a0a0a;
-      border: 2px solid #00f2ff;
-      padding: 14px 20px;
-      border-radius: 12px;
-      text-decoration: none;
-      color: white;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    .link:hover {
-      background: #00f2ff;
-      color: #000;
-    }
-
-    .icons {
-      font-size: 20px;
-      margin-top: 5px;
-    }
-
-    .icons span {
-      margin: 0 6px;
+    p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+      color: #ccc;
     }
 
     audio {
-      margin-top: 20px;
-      width: 90%;
-      max-width: 320px;
+      margin-bottom: 30px;
+    }
+
+    .link {
+      display: block;
+      margin: 15px auto;
+      padding: 15px;
+      background: #111;
+      border: 2px solid #00eaff;
+      border-radius: 10px;
+      max-width: 400px;
+      font-size: 1.1em;
+      color: #00eaff;
+      text-decoration: none;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .link:hover {
+      background: #00eaff;
+      color: #000;
+      transform: scale(1.03);
+    }
+
+    strong {
+      color: #fff;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <img src="logo.png" alt="HiperBoot" class="logo" />
+  <h1>HiperBoot</h1>
+  <p>Coloque o fone de ouvido, respire fundo e escute enquanto lê</p>
 
-    <div class="links">
-      <a class="link" href="p2p.html">
-        <div>
-          (Bitcoin) venda direta P2P compra e venda (USDT)<br />
-          <small style="font-weight: normal;">
-            Explicamos o dólar digital, como fazer câmbio entre pesos, reais, dólares e euros.
-          </small>
-        </div>
-        <div class="icons">
-          <span>₿</span><span>⇄</span><span>USDT</span><span>$</span><span>€</span><span>₱</span><span>R$</span>
-        </div>
-      </a>
+  <audio controls autoplay loop>
+    <source src="binaural.mp3" type="audio/mpeg" />
+    Seu navegador não suporta o elemento de áudio.
+  </audio>
 
-      <a class="link" href="https://api.whatsapp.com/send?phone=59895000000&text=Quero%20aprender%20a%20usar%20o%20HiperBoot!">
-        Falar com Especialista no WhatsApp 📲
-      </a>
-    </div>
+  <!-- Link P2P -->
+  <a class="link" href="p2p.html">
+    Aprenda a comprar e vender <strong>Bitcoin</strong> e <strong>USDT</strong> direto com pessoas (P2P)<br />
+    Faça câmbio entre <strong>pesos, reais, dólares e euros</strong> de forma simples e segura
+  </a>
 
-    <audio controls autoplay loop>
-      <source src="binaural.mp3" type="audio/mp3" />
-      Seu navegador não suporta áudio.
-    </audio>
-  </div>
+  <!-- Link Livro HyperFoco -->
+  <a class="link" href="https://go.hotmart.com/N12345678A" target="_blank">
+    📘 Acesse agora o Livro <strong>HyperFoco</strong>
+  </a>
+
+  <!-- Link WhatsApp Venda -->
+  <a class="link" href="https://wa.me/59899999999" target="_blank">
+    💬 Fale agora no <strong>WhatsApp</strong> para comprar ou vender direto
+  </a>
+
 </body>
 </html>
